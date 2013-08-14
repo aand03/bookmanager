@@ -1,5 +1,13 @@
 Bookmanager::Application.routes.draw do
   
+  get "sessions/new"
+  get "sessions/create"
+  get "sessions/destroy"
+
+  get "login" => "sessions#new", as: "login"
+  delete "logout" => "sessions#destroy", as: "logout"
+  post "sessions" => "sessions#create", as: "sessions"
+
   resources :users, only: [:new, :create]
 
   resources :posts
