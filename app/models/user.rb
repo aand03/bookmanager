@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+	has_many :bookmarks
+	
 	has_secure_password
 	
 	validates :email,
