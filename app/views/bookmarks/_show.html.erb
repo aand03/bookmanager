@@ -1,0 +1,7 @@
+<% if @bookmark.errors.any? %>
+	<ul>
+		<% @bookmark.errors.full_messages.each do |msg| %>
+		<li><%= msg %>
+		<% end %>
+	</ul>
+<% end %>
